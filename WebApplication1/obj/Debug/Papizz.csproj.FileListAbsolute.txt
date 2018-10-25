@@ -70,3 +70,4 @@ C:\Users\Per\source\repos\WebApplication1\WebApplication1\obj\Debug\Papizz.cspro
 C:\Users\Per\source\repos\WebApplication1\WebApplication1\obj\Debug\Papizz.csproj.CopyComplete
 C:\Users\Per\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Per\source\repos\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\Users\Per\source\repos\WebApplication1\WebApplication1\obj\Debug\Papizz.csprojAssemblyReference.cache
