@@ -1,0 +1,12 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+	ViewBag.Title = "ManageImages";
+}
+
+<h2>Hantera galleri</h2>
+
+@Html.ActionLink("Ladda upp bilder", "AddImage", "Admin") <br />
+@Html.ActionLink("Se och ta bort bilder", "viewImagestoDelete", "Admin")

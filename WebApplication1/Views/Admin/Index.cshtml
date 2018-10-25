@@ -1,0 +1,13 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+	ViewBag.Title = "Index";
+}
+<!--Enkel sida att landa på som administratör-->
+<h2>Välkommen, administratör!</h2>
+
+<a href="/Admin/EditMeny">Ändra i meny</a> <br />
+<a href="/Admin/Kontakt">Ändra kontaktinfo</a> <br />
+<a href="/Admin/ManageImages">Hantera galleri</a>

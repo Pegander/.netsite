@@ -1,0 +1,29 @@
+﻿@model List<Papizz.Meny>
+@{
+	ViewBag.Title = "Index";
+}
+<main class="meny--main">
+	<h2>Meny</h2>
+	<div>
+		<table border="1">
+			<thead>
+				<tr>
+					<td><strong>Nummer</strong></td>
+					<td><strong>Namn</strong></td>
+					<td><strong>Pris</strong></td>
+					<td><strong>Topping</strong></td>
+				</tr>
+			</thead>
+			<!--Gå igenom min menylista för att visa menyn-->
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td class="meny--item">@Html.DisplayFor(modelitem => item.Id)</td>
+					<td class="meny--item">@Html.DisplayFor(modelitem => item.Namn)</td>
+					<td class="meny--item">@Html.DisplayFor(modelitem => item.Pris)</td>
+					<td class="meny--item">@Html.DisplayFor(modelitem => item.Topping)</td>
+				</tr>
+			}
+		</table>
+	</div>
+</main>

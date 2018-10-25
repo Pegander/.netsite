@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MenyDatabaseModelStoreContainer" CdmEntityContainer="MenyDatabaseEntities">
+    <EntitySetMapping Name="Menies">
+      <EntityTypeMapping TypeName="MenyDatabaseModel.Meny">
+        <MappingFragment StoreEntitySet="Meny">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Namn" ColumnName="Namn" />
+          <ScalarProperty Name="Pris" ColumnName="Pris" />
+          <ScalarProperty Name="Topping" ColumnName="Topping" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

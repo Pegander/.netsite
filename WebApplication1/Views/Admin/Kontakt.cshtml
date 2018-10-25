@@ -1,0 +1,31 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<Papizz.Kontakt>
+@{
+	ViewBag.Title = "EditKontakt";
+}
+
+<h2>EditKontakt</h2>
+<div>
+	<h2>Kontaktinfo</h2>
+	<table border="1">
+		<thead>
+			<tr>
+				<td><strong>Telefonnummer</strong></td>
+				<td><strong>Epost</strong></td>
+			</tr>
+		</thead>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(modelitem => item.Telefonnummer)</td>
+				<td>@Html.DisplayFor(modelitem => item.Epost)</td>
+				<td>@Html.ActionLink("Ändra", "EditKontakt", new { id = item.Id })</td>
+			</tr>
+		}
+	</table>
+	@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+
+</div>

@@ -1,0 +1,22 @@
+﻿@model List<Papizz.Kontakt>
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Kontakt</h2>
+<table class="contact--container">
+	<thead>
+		<tr>
+			<td class="contact--post">Telefon</td>
+			<td class="contact--post">Epost</td>
+		</tr>
+	</thead>
+	@foreach (var item in Model)
+	{
+		<tr>
+			<td class="contact--post">@Html.DisplayFor(m => item.Telefonnummer)</td>
+			<td class="contact--post">@Html.DisplayFor(m => item.Epost)</td>
+		</tr>
+	}
+
+</table>

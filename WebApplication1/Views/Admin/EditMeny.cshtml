@@ -1,0 +1,39 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model List<Papizz.Meny>
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+	ViewBag.Title = "andraMeny";
+}
+
+<h2>Ändra menyn</h2>
+
+
+<div>
+	<h2>Meny</h2>
+	<table border="1">
+		<thead>
+			<tr>
+				<td><strong>Namn</strong></td>
+				<td><strong>Pris</strong></td>
+				<td><strong>Topping</strong></td>
+				<td><strong>Radera</strong></td>
+				<td><strong>Ändra</strong></td>
+			</tr>
+		</thead>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@Html.DisplayFor(modelitem => item.Namn)</td>
+				<td>@Html.DisplayFor(modelitem => item.Pris)</td>
+				<td>@Html.DisplayFor(modelitem => item.Topping)</td>
+				<td>@Html.ActionLink("Radera", "Delete", new { id = item.Id })</td>
+				<td>@Html.ActionLink("Ändra", "Edit", new { id = item.Id })</td>
+			</tr>
+		}
+	</table>
+	@Html.ActionLink("Lägg till rätt", "Create") <br />
+	@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+
+</div>

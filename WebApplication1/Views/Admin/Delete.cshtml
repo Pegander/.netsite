@@ -1,0 +1,25 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model Papizz.Meny
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+	ViewBag.Title = "Delete";
+}
+
+<h2>Ta bort</h2>
+
+<div>
+	Film: <br />
+	@Html.DisplayFor(m => Model.Namn) <br />
+	Pris: <br />
+	@Html.DisplayFor(m => Model.Pris) <br />
+	Topping:
+	@Html.DisplayFor(m => Model.Topping) <br />
+	@using (Html.BeginForm())
+	{
+		<input type="submit" value="Radera" />
+	}
+	<br />
+	@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+</div>

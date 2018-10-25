@@ -1,0 +1,20 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model List<Papizz.Image>
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewBag.Title = "viewImagestoDelete";
+}
+
+<h2>Bilder i galleriet</h2>
+
+@foreach (var item in Model)
+{
+	<img src="/uploaded/@Html.DisplayFor(modelitem => item.Filnamn)" />
+	@Html.ActionLink("Radera", "ImageDelete", new { id = item.Id })
+}
+<br />
+@Html.ActionLink("Tillbaka till hantera galleri", "ManageImages", "Admin")
+

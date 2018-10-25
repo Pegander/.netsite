@@ -1,0 +1,24 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model Papizz.Kontakt
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewBag.Title = "EditKontakt";
+}
+
+<h2>EditKontakt</h2>
+
+
+@using (Html.BeginForm())
+{
+	<div>
+		Telefonnummer: <br />
+		@Html.EditorFor(m => Model.Telefonnummer) <br />
+		Epost: <br />
+		@Html.EditorFor(m => Model.Epost) <br />
+		<input type="submit" value="Spara ändringar" /> <br />
+		@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+	</div>
+}

@@ -1,0 +1,24 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model Papizz.Meny
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+	ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+	<div>
+		Namn: <br />
+		@Html.EditorFor(m => Model.Namn) <br />
+		Pris: <br />
+		@Html.EditorFor(m => Model.Pris) <br />
+		Topping:
+		@Html.EditorFor(m => Model.Topping) <br />
+		<input type="submit" value="Spara ändringar" /> <br />
+		@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+	</div>
+}

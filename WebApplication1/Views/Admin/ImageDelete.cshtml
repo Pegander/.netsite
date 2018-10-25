@@ -1,0 +1,29 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model Papizz.Image
+	@{
+		Layout = "~/Views/Shared/_AdminLayout.cshtml";
+	}
+	@{
+		ViewBag.Title = "ImageDelete";
+	}
+
+	<h2>Delete</h2>
+
+	<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<title>Ta bort bilder</title>
+	</head>
+	<body>
+		<div>
+			Bildnamn: <br />
+			@Html.DisplayFor(m => Model.Filnamn) <br />
+			<img src="/Uploaded/@Html.DisplayFor(m => Model.Filnamn)" />
+			@using (Html.BeginForm())
+			{
+				<input type="submit" value="Radera" />
+			}
+			@Html.ActionLink("Tillbaka till huvudsida för administratör", "Index")
+		</div>
+	</body>
+</html>

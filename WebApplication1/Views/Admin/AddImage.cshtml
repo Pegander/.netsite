@@ -1,0 +1,18 @@
+﻿<!--Använder en annan layout för admindelen för att få med en smidig meny för administratörer-->
+@model List<Papizz.Image>
+@{
+	Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@{
+	ViewBag.Title = "AddImage";
+}
+
+<h2>Lägg till bild</h2>
+@using (Html.BeginForm("AddImage", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	<input type="file" name="file" />
+	<input type="submit" value="Ladda upp" />
+}
+<br />
+@Html.ActionLink("Tillbaka till hantera galleri", "ManageImages")

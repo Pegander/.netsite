@@ -1,0 +1,13 @@
+﻿@model List<Papizz.Image>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h2>Galleri</h2>
+
+@foreach (var item in Model)
+{
+	<!--Försökte få klasser att fungera här men det verkade inte gå, fungerar på mina andra element som meny osv men inte här.-->
+	<img style="max-height:350px; border-radius:10px;" class="gallery--image" src="/uploaded/@Html.DisplayFor(modelitem => item.Filnamn)"  />
+}
